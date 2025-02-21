@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +22,19 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0; 
+    animation: fadeIn 1.5s forwards; 
 }
+
+
+.today-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
 
 .container{
     height: 400px;
@@ -32,15 +53,13 @@ body{
     justify-content: center;
     transform: scale(1.03) perspective(200px);
     cursor: pointer;
-    box-shadow: 0 0 20px -10px rrgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
-
 
 .left-info:hover {
     transform: scale(1.1) perspective(2500px) rotateY(5deg);
 }
-
 
 .pic-gradient{
     position: absolute;
@@ -148,7 +167,6 @@ body{
     border-radius: 5px;
 }
 
-
 .btn-container{
     padding: 25px 35px;
 }
@@ -170,3 +188,4 @@ body{
 .loc-button:hover{
     background: #1a237e;
 }
+
