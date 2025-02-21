@@ -17,7 +17,7 @@
 }
 
 body{
-    background-color: url('images/background.jpg');
+    background-color: #3c464b;
     height: 100vh;
     display: flex;
     align-items: center;
