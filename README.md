@@ -19,7 +19,8 @@ Um aplicativo de previsão do tempo que exibe a previsão para os próximos **7 
 
 ##  Preview 
 
-![Weather App Preview](URL_DA_IMAGEM_AQUI)  
+![Weather App Preview](![image](https://github.com/user-attachments/assets/453fdc1a-46ea-4ddc-83a9-745492275aab)
+)  
 
 ##  Como Usar  
 
