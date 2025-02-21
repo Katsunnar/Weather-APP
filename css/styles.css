@@ -139,3 +139,34 @@ body{
     font-weight: 700;
 }
 
+.city-input {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.btn-container{
+    padding: 25px 35px;
+}
+
+.loc-button{
+    outline: none;
+    width: 100%;
+    border: none;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 10px;
+    background: #303f9f;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.loc-button:hover{
+    background: #1a237e;
+}

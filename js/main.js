@@ -38,7 +38,6 @@ changeBackgroundImage();
 
 
 const apiKey = 'YOUR_API_KEY';
-const locButton = document.querySelector('.loc-button');
 const todayInfo = document.querySelector('.today-info');
 const todayWeatherIcon = document.querySelector('.today-weather i');
 const todayTemp = document.querySelector('.weather-temp');
@@ -250,6 +249,81 @@ function fetchWeatherByLocation() {
 }
 
 document.addEventListener('DOMContentLoaded', fetchWeatherByLocation);
-locButton.addEventListener('click', fetchWeatherByLocation);
 
 
+
+const locButton = document.querySelector('.loc-button');
+const cityForm = document.querySelector('.city-form');
+const cityInput = document.querySelector('.city-input');
+
+// Função para verificar se a cidade é válida
+async function isValidCity(city) {
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY`;
+
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        if (data.cod === 200) {
+            // Cidade válida
+            return true;
+        } else {
+            // Cidade inválida
+            return false;
+        }
+    } catch (error) {
+        console.error('Erro ao verificar a cidade:', error);
+        return false;
+    }
+}
+
+// Evento para exibir o formulário de cidade ao clicar no botão
+locButton.addEventListener('click', () => {
+    locButton.style.display = 'none';
+    cityForm.style.display = 'block';
+    cityInput.focus(); // Foca no input para o usuário começar a digitar
+});
+
+// Evento para enviar a cidade e buscar as informações
+cityForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const cidade = cityInput.value.trim(); // Remove espaços em branco
+
+    if (cidade === '') {
+        // Se o campo de entrada estiver vazio, fecha o formulário e exibe o botão novamente
+        locButton.style.display = 'block';
+        cityForm.style.display = 'none';
+        cityInput.value = '';
+    } else {
+        const isCityValid = await isValidCity(cidade); // Verifica se a cidade é válida
+
+        if (isCityValid) {
+            // Se a cidade for válida, busca as informações
+            fetchWeatherData(cidade); // Função que busca os dados do clima
+            locButton.style.display = 'block';
+            cityForm.style.display = 'none';
+            cityInput.value = '';
+        } else {
+            // Se a cidade for inválida, retorna ao estado inicial
+            locButton.style.display = 'block';
+            cityForm.style.display = 'none';
+            cityInput.value = '';
+        }
+    }
+});
+
+// Evento que verifica se o usuário clicou fora do input ou do formulário de cidade
+document.addEventListener('click', (e) => {
+    if (!cityForm.contains(e.target) && !locButton.contains(e.target)) {
+        locButton.style.display = 'block';
+        cityForm.style.display = 'none';
+        cityInput.value = '';
+    }
+});
+
+// Se o campo de input perder o foco (blur), retorna ao botão normal
+cityInput.addEventListener('blur', () => {
+    locButton.style.display = 'block';
+    cityForm.style.display = 'none';
+    cityInput.value = '';
+});
