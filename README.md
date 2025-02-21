@@ -39,4 +39,5 @@ const apiKey = 'SUA_API_KEY_AQUI';
 ```
 ## Desenvolvedor
 - Luqtta
+- AsmrProg (Base Front-End)
 
