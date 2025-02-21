@@ -2,6 +2,9 @@
 
 Um aplicativo de previsão do tempo que exibe a previsão para os próximos **7 dias** utilizando a **WeatherAPI**.  
 
+## 📌 SITE DEMO  
+🔗 [Acesse o Weather App](https://weatheerchecker.netlify.app)  
+
 ##  Funcionalidades  
 
 - 📍 **Busca automática** pela localização do usuário  
