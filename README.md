@@ -38,5 +38,5 @@ const apiKey = 'SUA_API_KEY_AQUI';
 
 ```
 ## Desenvolvedor
-Desenvolvido por Luqtta.
+- Luqtta
 
