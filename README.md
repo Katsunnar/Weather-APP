@@ -2,6 +2,9 @@
 
 Um aplicativo de previsão do tempo que exibe a previsão para os próximos **7 dias** utilizando a **WeatherAPI**.  
 
+## 📌 SITE DEMO  
+🔗 [Acesse o Weather App](https://weatheerchecker.netlify.app)  
+
 ##  Funcionalidades  
 
 - 📍 **Busca automática** pela localização do usuário  
@@ -19,7 +22,7 @@ Um aplicativo de previsão do tempo que exibe a previsão para os próximos **7 
 
 ##  Preview 
 
-![Weather App Preview](URL_DA_IMAGEM_AQUI)  
+![Image](https://github.com/user-attachments/assets/46d7b78e-f920-492c-b4d1-0cb691b51f10)
 
 ##  Como Usar  
 
@@ -39,4 +42,5 @@ const apiKey = 'SUA_API_KEY_AQUI';
 ```
 ## Desenvolvedor
 - Luqtta
+- AsmrProg (Base Front-End)
 
