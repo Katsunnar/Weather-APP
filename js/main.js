@@ -15,20 +15,26 @@ function changeBackgroundImage() {
     }
 
     const leftInfo = document.querySelector('.left-info');
+    
+    // Começa com a opacidade 0 para a animação de fade
     leftInfo.style.opacity = 0;
 
     setTimeout(() => {
+        // Troca da imagem e ajusta o fundo com a nova imagem
         leftInfo.style.backgroundImage = `url('images/${images[currentIndex]}.png')`;
         leftInfo.style.backgroundSize = 'cover';
         leftInfo.style.backgroundPosition = 'center';
+        
+        // Alinha a opacidade de volta para 1 para a animação de fade-in
         leftInfo.style.opacity = 1;
         currentIndex++;
-    }, 500);
+    }, 500); // Tempo de fade-out de 500ms
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     shuffleImages();
-    document.querySelector('.left-info').style.transition = "opacity 0.5s ease-in-out";
+    const leftInfo = document.querySelector('.left-info');
+    leftInfo.style.transition = "opacity 0.5s ease-in-out, background-image 0.5s ease-in-out"; // Transições suaves
 });
 
 setInterval(changeBackgroundImage, 10000);
@@ -37,7 +43,8 @@ changeBackgroundImage();
 
 
 
-const apiKey = 'YOUR_API_KEY';
+
+const apiKey = 'SUA API WEATHER';
 const todayInfo = document.querySelector('.today-info');
 const todayWeatherIcon = document.querySelector('.today-weather i');
 const todayTemp = document.querySelector('.weather-temp');
@@ -151,7 +158,7 @@ function fetchWeatherData(location) {
 
             const todayPrecipitation = `${todayForecast.daily_chance_of_rain}%`;
             const todayHumidity = `${current.humidity}%`;
-            const todayWindSpeed = `${current.wind_kph} km/h`;
+            const todayWindSpeed = `${current.wind_kph}km/h`;
 
             const dayInfoContainer = document.querySelector('.day-info');
             dayInfoContainer.innerHTML = `
@@ -257,7 +264,7 @@ const cityForm = document.querySelector('.city-form');
 const cityInput = document.querySelector('.city-input');
 
 async function isValidCity(city) {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=SUA API OPENMEATHERMAP`;
 
     try {
         const response = await fetch(apiUrl);
