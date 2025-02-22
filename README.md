@@ -17,12 +17,17 @@ Um aplicativo de previsão do tempo que exibe a previsão para os próximos **7 
 
 - **HTML5**  
 - **CSS3**  
-- **JavaScript (ES6+)**  
+- **JavaScript (ES6+)**
+- **NodeJS**
 - **WeatherAPI** (para obter os dados meteorológicos)  
 
 ##  Preview 
 
 ![Image](https://github.com/user-attachments/assets/46d7b78e-f920-492c-b4d1-0cb691b51f10)
+
+## Preview Responsivo
+
+![Image](https://github.com/user-attachments/assets/5920c2c7-2f29-4018-9849-352aff7f14e6)
 
 ##  Como Usar  
 
@@ -43,4 +48,3 @@ const apiKey = 'SUA_API_KEY_AQUI';
 ## Desenvolvedor
 - Luqtta
 - AsmrProg (Base Front-End)
-
