@@ -21,6 +21,9 @@ Um aplicativo de previsão do tempo que exibe a previsão para os próximos **7 
 - **NodeJS**
 - **WeatherAPI** (para obter os dados meteorológicos)  
 
+## Sugestoes de cidades usando a api do google (**EM BREVE**)
+
+
 ##  Preview 
 
 ![Image](https://github.com/user-attachments/assets/46d7b78e-f920-492c-b4d1-0cb691b51f10)
