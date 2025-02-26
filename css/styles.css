@@ -332,12 +332,13 @@ body{
 }
 
 .left-info .day-of-week {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    margin-top: -55px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  margin-top: -55px;
+  white-space: nowrap;
 }
 
 
